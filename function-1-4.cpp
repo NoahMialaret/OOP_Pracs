@@ -6,9 +6,9 @@ void print_scaled(int array[3][3],int scale)
     {
         for (int x = 0; x < 3; x++)
         {
-            std::cout << array[y][x] * scale << " ";
+            std::cout << array[y][x] * scale << (x == 2 ? "" : " ");
         }
 
-        std::cout << (char)8 << std::endl;
+        std::cout << std::endl;
     }
 }
