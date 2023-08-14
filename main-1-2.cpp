@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "person.h"
+#include "Person.h"
 
 PersonList createPersonList(int);
 

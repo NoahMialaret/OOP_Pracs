@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "person.h"
+#include "Person.h"
 
 extern PersonList deepCopyPersonList(PersonList pl);
 
