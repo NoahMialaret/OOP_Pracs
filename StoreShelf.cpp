@@ -45,9 +45,5 @@ bool StoreShelf::add_music_box(MusicBox a_music_box)
  
 StoreShelf::~StoreShelf()
 {
-    std::cout << "Deleting StoreShelf..." << std::endl;
-    
     delete[] musicBoxes;
-
-    std::cout << "Deleted StoreShelf!" << std::endl;
 }

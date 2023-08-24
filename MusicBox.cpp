@@ -23,6 +23,4 @@ int MusicBox::get_width()
 }
 
 MusicBox::~MusicBox()
-{
-    std::cout << "Destructor Called!" << std::endl;
-}
+{}
