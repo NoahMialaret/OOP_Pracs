@@ -1,6 +1,9 @@
 #include <iostream>
 
-#include "vehicle.h"
+#include "Vehicle.h"
+#include "Car.h"
+#include "Bus.h"
+#include "Motorbike.h"
 
 int main()
 {
@@ -8,7 +11,7 @@ int main()
     Vehicle* bus = new Bus(2);
     Vehicle* motor = new Motorbike(3);
 
-    std::cout << motor->getID() << " has parked for " << motor->GetParkingDuration() << std::endl;
+    std::cout << motor->getID() << " has parked for " << motor->getParkingDuration() << std::endl;
 
     return 0;
 }

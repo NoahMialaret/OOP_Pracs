@@ -15,28 +15,4 @@ protected:
     int ID;
 };
 
-class Car : public Vehicle
-{
-public:
-    Car(int ID);
-    int getParkingDuration() const;
-
-};
-
-class Bus : public Vehicle
-{
-public:
-    Bus(int ID);
-    int getParkingDuration() const;
-
-};
-
-class Motorbike : public Vehicle
-{
-public:
-    Motorbike(int ID);
-    int getParkingDuration() const;
-
-};
-
 #endif
