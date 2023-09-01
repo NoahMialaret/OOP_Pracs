@@ -30,8 +30,7 @@ void ParkingLot::parkVehicle(Vehicle* vehicle)
     {
         if (vehicles[i] == nullptr)
         {
-            vehicles[i] = new Vehicle(0);
-            *vehicles[i] = *vehicle;
+            vehicles[i] = vehicle;
             break;
         }
     }
@@ -60,4 +59,16 @@ void ParkingLot::unParkVehicle(int ID)
     {
         std::cout << "Vehicle not in the lot" << std::endl;
     }
+}
+
+int ParkingLot::countOverstayingVehicles(int threshhold)
+{
+    int count = 0;
+
+    for (int i = 0; i < maxVehicles; i++)
+    {
+        count += vehicles[i]->getParkingDuration() > threshhold;
+    }
+
+    return count;
 }

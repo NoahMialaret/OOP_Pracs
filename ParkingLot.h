@@ -15,6 +15,8 @@ public:
 
     void parkVehicle(Vehicle* vehicle);
     void unParkVehicle(int ID);
+
+    int countOverstayingVehicles(int threshhold);
     
 private:
     Vehicle** vehicles = nullptr;
