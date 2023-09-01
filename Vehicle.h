@@ -7,12 +7,13 @@ class Vehicle
 {
 public:
     Vehicle(int ID);
+    virtual ~Vehicle() = default;
 
     int getID() const;
     virtual int getParkingDuration() const;
 protected:
-    std::time_t timeOfEntry;
     int ID;
+    std::time_t timeOfEntry;
 };
 
 #endif

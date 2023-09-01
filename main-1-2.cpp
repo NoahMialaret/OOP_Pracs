@@ -33,7 +33,7 @@ int main()
     }
 
 
-    pl.unParkVehicle(6);
+    pl.unparkVehicle(6);
 
     return 0;
 }

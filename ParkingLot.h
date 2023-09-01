@@ -14,7 +14,7 @@ public:
     int getCount() const;
 
     void parkVehicle(Vehicle* vehicle);
-    void unParkVehicle(int ID);
+    void unparkVehicle(int ID);
 
     int countOverstayingVehicles(int threshhold);
     

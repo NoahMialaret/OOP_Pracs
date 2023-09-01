@@ -38,7 +38,7 @@ void ParkingLot::parkVehicle(Vehicle* vehicle)
     curNum++;
 }
 
-void ParkingLot::unParkVehicle(int ID)
+void ParkingLot::unparkVehicle(int ID)
 {
     bool foundVehicle = false;
 
