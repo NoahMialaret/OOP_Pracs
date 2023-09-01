@@ -10,3 +10,8 @@ int Vehicle::getID() const
 {
     return ID;
 }
+
+int Vehicle::getParkingDuration() const
+{
+    return -1;
+}

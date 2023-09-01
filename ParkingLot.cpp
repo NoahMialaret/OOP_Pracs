@@ -5,6 +5,12 @@ ParkingLot::ParkingLot(int maxVehicles)
     maxVehicles(maxVehicles)
 {
     vehicles = new Vehicle*[maxVehicles];
+
+    for (int i = 0; i < maxVehicles; i++)
+    {
+        delete vehicles[i];
+        vehicles[i] = nullptr;
+    }
 }
 
 int ParkingLot::getCount() const
@@ -12,7 +18,7 @@ int ParkingLot::getCount() const
     return curNum;
 }
 
-void ParkingLot::parkVehicle(Vehicle *vehicle)
+void ParkingLot::parkVehicle(Vehicle* vehicle)
 {
     if (curNum >= maxVehicles)
     {
@@ -20,7 +26,15 @@ void ParkingLot::parkVehicle(Vehicle *vehicle)
         return;
     }
 
-    *vehicles[curNum] = *vehicle;
+    for (int i = 0; i < maxVehicles; i++)
+    {
+        if (vehicles[i] == nullptr)
+        {
+            vehicles[i] = new Vehicle(0);
+            *vehicles[i] = *vehicle;
+            break;
+        }
+    }
 
     curNum++;
 }
@@ -29,23 +43,15 @@ void ParkingLot::unParkVehicle(int ID)
 {
     bool foundVehicle = false;
 
-    for (int i = 0; i < curNum; i++)
+    for (int i = 0; i < maxVehicles; i++)
     {
         if (vehicles[i]->getID() == ID)
         {
             delete vehicles[i];
+            vehicles[i] = nullptr;
             foundVehicle = true;
+            break;
         }
-
-        if (foundVehicle && i + 1 < maxVehicles)
-        {
-            vehicles[i] = vehicles[i + 1];
-        }
-    }
-
-    if(foundVehicle)
-    {
-        vehicles[maxVehicles - 1] = nullptr;
     }
 
     curNum -= (int)foundVehicle;

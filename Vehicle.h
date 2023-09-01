@@ -9,7 +9,7 @@ public:
     Vehicle(int ID);
 
     int getID() const;
-    virtual int getParkingDuration() const = 0;
+    virtual int getParkingDuration() const;
 protected:
     std::time_t timeOfEntry;
     int ID;

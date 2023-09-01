@@ -17,7 +17,7 @@ public:
     void unParkVehicle(int ID);
     
 private:
-    Vehicle** vehicles;
+    Vehicle** vehicles = nullptr;
 
     int maxVehicles = 0;
     int curNum = 0;
