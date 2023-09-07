@@ -14,7 +14,7 @@ public:
     int get_emissions() const;
     void set_emissions(int newEmission);
 protected:
-    int price = 0;
+    int price;
     int emissions = 0;
 };
 
