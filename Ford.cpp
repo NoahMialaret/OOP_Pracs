@@ -11,7 +11,7 @@ Ford::Ford(int badgeNumber, int price)
 
 void Ford::refuel(int litres)
 {
-    litresOfFuel += litres;
+    litresOfFuel += litres * 10;
 
     if (litresOfFuel > 600)
     {
