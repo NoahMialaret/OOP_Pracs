@@ -21,21 +21,17 @@ void Ford::refuel(int litres)
 
 void Ford::drive(int kms)
 {
-    int kmDriven = 0;
-
     while (litresOfFuel > 0.0f && kms > 0)
     {
         litresOfFuel -= 0.2;
+        emissions += 234;
         kms--;
-        kmDriven++;
     }
 
     if (litresOfFuel < 0.0f)
     {
         litresOfFuel = 0.0f;
     }
-
-    emissions += kmDriven * 234;
 }
 
 int Ford::get_badgeNumber() const

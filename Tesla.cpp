@@ -21,21 +21,17 @@ void Tesla::chargeBattery(int mins)
 
 void Tesla::drive(int kms)
 {
-    int kmDriven = 0;
-
     while (batteryPercentage > 0.0f && kms > 0)
     {
         batteryPercentage -= 0.2;
+        emissions += 74;   
         kms--;
-        kmDriven++;
     }
 
     if (batteryPercentage < 0.0f)
     {
         batteryPercentage = 0.0f;
     }
-
-    emissions += kmDriven * 74;
 }
 
 char Tesla::get_model() const
