@@ -18,7 +18,7 @@ public:
     void set_litresOfFuel(float newFuel);
 private:
     int badgeNumber;
-    float litresOfFuel = 60.0f;
+    int litresOfFuel = 600;
 };
 
 #endif

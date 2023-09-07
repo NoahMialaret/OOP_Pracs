@@ -18,7 +18,7 @@ public:
     void set_batteryPercentage(float newPercent);
 private:
     char model;
-    float batteryPercentage = 100.0f;
+    int batteryPercentage = 1000;
 };
 
 #endif

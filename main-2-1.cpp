@@ -9,7 +9,7 @@ int main()
 
     for (int i = 0; i < 3; i++)
     {
-        tl.drive(200);
+        tl.drive(151);
 
         std::cout << "emissions: " << tl.get_emissions() << std::endl;
 

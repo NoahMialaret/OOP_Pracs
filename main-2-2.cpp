@@ -9,7 +9,7 @@ int main()
 
     for (int i = 0; i < 3; i++)
     {
-        fr.drive(200);
+        fr.drive(151);
 
         std::cout << "Emissions: " << fr.get_emissions() << std::endl;
 
