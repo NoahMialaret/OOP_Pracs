@@ -11,7 +11,7 @@ public:
     char getCategory();
     void setLoc(int x, int y);
     void setCategory(char category);
-private:
+protected:
     std::tuple<int, int> location;
     char category;
 };
