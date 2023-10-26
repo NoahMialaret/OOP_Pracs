@@ -10,9 +10,9 @@
 
 int main()
 {
-    Play play;
-    play.initPlay(1, 10, 10, 10);
-    play.playCycle(15, 2.0);
+    // Play play;
+    // play.initPlay(1, 10, 10, 10);
+    // play.playCycle(15, 2.0);
 
     return 0;
 }
