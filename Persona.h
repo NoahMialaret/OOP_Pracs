@@ -10,7 +10,6 @@ class Persona : public Spot
 public:
     Persona(int x, int y);
     void shift(int dx, int dy);
-private:
 };
 
 #endif

@@ -10,7 +10,8 @@ public:
     std::tuple<int, int> getLoc();
     char getCategory();
     void setLoc(int x, int y);
-    void setCategory(char category);
+    virtual void setCategory(char category);
+    virtual bool isOperative();
 protected:
     std::tuple<int, int> location;
     char category;

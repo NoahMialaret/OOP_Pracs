@@ -25,3 +25,8 @@ void Spot::setCategory(char _category)
 {
     category = _category;
 }
+
+bool Spot::isOperative()
+{
+    return false;
+}
