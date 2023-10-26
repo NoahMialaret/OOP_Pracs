@@ -8,8 +8,15 @@
 class Persona : public Spot
 {
 public:
-    Persona(int x, int y);
-    void shift(int dx, int dy);
+    Persona(int x, int y)
+        :
+        Spot(x, y, 'P')
+    {}
+    void shift(int dx, int dy)
+    {
+        std::get<0>(location) += dx;
+        std::get<1>(location) += dy;
+    }
 };
 
 #endif
